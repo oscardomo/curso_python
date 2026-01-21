@@ -63,7 +63,14 @@ def palabras_mas_frecuentes(palabras: list[str], n: int = 10) -> list[tuple[str,
 
 
 def pedir_ruta_archivo() -> str:
-    """Pide al usuario la ruta de un archivo de texto y la devuelve."""
+    """
+    Pide al usuario la ruta de un archivo de texto y la devuelve.
+
+    Repite el prompt hasta que se proporcione una ruta no vacía.
+
+    Returns:
+        Ruta del archivo introducida por el usuario.
+    """
     while True:
         ruta = input("Ingresa la ruta del archivo de texto: ").strip()
         if ruta:
@@ -72,6 +79,10 @@ def pedir_ruta_archivo() -> str:
 
 
 def main():
+    """
+    Pide una ruta de archivo, cuenta las palabras y muestra el total
+    y las 10 más frecuentes. Gestiona FileNotFoundError y otros errores.
+    """
     ruta = pedir_ruta_archivo()
     
     try:

@@ -1,5 +1,21 @@
-# Determina si un número es primo
+"""
+Módulo con la función es_primo(n) y tests unitarios (unittest).
+"""
+
+
 def es_primo(n):
+    """
+    Indica si un entero n es primo.
+
+    Un número es primo si es mayor que 1 y solo es divisible por 1 y por sí mismo.
+    Se consideran no primos: números <= 1 y enteros negativos.
+
+    Args:
+        n: Número entero a evaluar.
+
+    Returns:
+        True si n es primo, False en caso contrario.
+    """
     if n <= 1:
         return False
     if n == 2:
@@ -19,6 +35,8 @@ if __name__ == "__main__":
     import unittest
 
     class TestEsPrimo(unittest.TestCase):
+        """Casos de prueba para la función es_primo."""
+
         def test_no_primos_menores_iguales_1(self):
             self.assertFalse(es_primo(0))
             self.assertFalse(es_primo(1))

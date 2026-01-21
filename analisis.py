@@ -1,4 +1,7 @@
-# analisis.py: lee y trabaja con datos.csv
+"""
+Lee datos.csv, calcula estadísticas (media, mediana, desviación estándar)
+de las columnas x e y, y muestra un gráfico de dispersión.
+"""
 
 import csv
 import statistics

@@ -1,4 +1,8 @@
-# Calculadora simple
+"""
+Calculadora interactiva por consola: suma, resta, multiplicación y división.
+Escribe 'salir' para terminar.
+"""
+
 while True:
     operacion = input("Elige una operación (suma, resta, multiplicación, división) o 'salir' para terminar: ")
     if operacion == "salir":
