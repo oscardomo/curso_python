@@ -60,4 +60,7 @@ Proyecto de curso de Python. Puedes indicar aquí tu nombre o enlace a tu perfil
 
 ## Licencia
 
-Uso educativo. Ajusta la licencia según prefieras.
+Este proyecto se publica bajo la [licencia MIT](LICENSE): uso, modificación y
+redistribución libres, incluyendo en proyectos propietarios, manteniendo el
+aviso de copyright y la licencia. Adecuada para material educativo y
+reutilización con mínimas restricciones.
