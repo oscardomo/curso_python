@@ -1,1 +1,4 @@
+# Dependencias externas. Instalar: pip install -r requirements.txt
+# (csv, statistics, collections, unittest son stdlib y no se listan)
+
 matplotlib>=3.5
