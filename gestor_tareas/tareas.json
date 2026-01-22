@@ -1,0 +1,25 @@
+{
+  "siguiente_id": 5,
+  "tareas": [
+    {
+      "id": 1,
+      "texto": "Comprar leche",
+      "hecho": true
+    },
+    {
+      "id": 2,
+      "texto": "Aaa",
+      "hecho": true
+    },
+    {
+      "id": 3,
+      "texto": "Bbb",
+      "hecho": true
+    },
+    {
+      "id": 4,
+      "texto": "hola",
+      "hecho": true
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Tareas</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; }
+      .wrap { max-width: 720px; margin: 0 auto; }
+      form { display: flex; gap: .5rem; margin: 1rem 0 1.5rem; }
+      input[type="text"] { flex: 1; padding: .6rem .7rem; }
+      button { padding: .6rem .8rem; cursor: pointer; }
+      ul { list-style: none; padding: 0; }
+      li { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .6rem .2rem; border-bottom: 1px solid #eee; }
+      .hecho { text-decoration: line-through; color: #666; }
+      .meta { color: #666; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Gestor de tareas</h1>
+      <p class="meta">Datos en memoria (se pierden al reiniciar).</p>
+
+      <form method="post" action="/agregar">
+        <input type="text" name="texto_tarea" placeholder="Nueva tarea..." autocomplete="off" required />
+        <button type="submit">Agregar</button>
+      </form>
+
+      {% if tareas %}
+        <ul>
+          {% for tarea in tareas %}
+            <li>
+              <div>
+                <strong>#{{ tarea['id'] }}</strong>
+                {% if tarea['hecho'] %}
+                  <span class="hecho">{{ tarea['texto'] }}</span>
+                {% else %}
+                  <span>{{ tarea['texto'] }}</span>
+                {% endif %}
+              </div>
+
+              {% if not tarea['hecho'] %}
+                <a href="/completar/{{ tarea['id'] }}">[Completar]</a>
+              {% else %}
+                <span class="meta">Completada</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No hay tareas todavía.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
+
